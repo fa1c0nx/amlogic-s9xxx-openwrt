@@ -1,5 +1,5 @@
 #=====================================================================================
-# https://github.com/ophub/amlogic-s9xxx-openwrt
+# https://github.com/fa1c0n/amlogic-s9xxx-openwrt
 # Description: Build OpenWrt with official
 # Source code repository: https://github.com/openwrt/openwrt / Branch: master
 #=====================================================================================
@@ -60,13 +60,13 @@ on:
         default: "960"
 
 env:
-  REPO_URL: https://github.com/openwrt/openwrt
-  REPO_BRANCH: master
+  REPO_URL: https://github.com/fa1c0nx/amlogic-s9xxx-openwrt
+  REPO_BRANCH: main
   FEEDS_CONF: router-config/openwrt-master/feeds.conf.default
   CONFIG_FILE: router-config/openwrt-master/.config
   DIY_P1_SH: router-config/openwrt-master/diy-part1.sh
   DIY_P2_SH: router-config/openwrt-master/diy-part2.sh
-  TZ: America/New_York
+  TZ: Europe/Stockholm
 
 jobs:
   build:
@@ -160,7 +160,7 @@ jobs:
 
       - name: Build OpenWrt firmware
         if: ${{ steps.compile.outputs.status }} == 'success' && !cancelled()
-        uses: ophub/amlogic-s9xxx-openwrt@main
+        uses: fa1c0nx/amlogic-s9xxx-openwrt@main
         with:
           openwrt_path: openwrt/bin/targets/*/*/*rootfs.tar.gz
           openwrt_board: ${{ inputs.openwrt_board }}
@@ -179,10 +179,10 @@ jobs:
           body: |
             This is OpenWrt firmware for Amlogic s9xxx tv box
             * Firmware information
-            Default IP: 192.168.1.1
-            Default username: root
-            Default password: password
-            Default WIFI name: OpenWrt
+            Default IP: 10.0.0.2
+            Default username: 2226
+            Default password: 2226-Group-W3-4R3-TH3-FUTUR3
+            Default WIFI name: 2226-Group
             Default WIFI password: none
             Install to EMMC: Login to OpenWrt → System → Amlogic Service → Install OpenWrt
 
