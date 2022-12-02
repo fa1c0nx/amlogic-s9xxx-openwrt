@@ -71,7 +71,7 @@ on:
         default: "960"
 
 env:
-  TZ: America/New_York
+  TZ: Europe/Stockholm
   IMAGEBUILDER_SH: router-config/openwrt-imagebuilder/imagebuilder.sh
 
 jobs:
@@ -137,9 +137,9 @@ jobs:
           body: |
             This is OpenWrt firmware for Amlogic s9xxx tv box
             * Firmware information
-            Default IP: 192.168.1.1
-            Default username: root
-            Default password: password
-            Default WIFI name: OpenWrt
+            Default IP: 10.0.0.2
+            Default username: 2226
+            Default password: 2226-Group-W3-4R3-TH3-FUTUR3
+            Default WIFI name: 2226-Group
             Default WIFI password: none
             Install to EMMC: Login to OpenWrt → System → Amlogic Service → Install OpenWrt
