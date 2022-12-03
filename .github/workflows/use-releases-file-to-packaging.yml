@@ -20,7 +20,7 @@ on:
       openwrt_board:
         description: "Select device board"
         required: false
-        default: "all"
+        default: "s905w"
         type: choice
         options:
           - all
@@ -45,7 +45,7 @@ on:
       openwrt_kernel:
         description: "Select kernel version"
         required: false
-        default: "5.10.135_5.15.50"
+        default: "5.15.50"
         type: choice
         options:
           - 5.4.210_5.10.135_5.15.50
