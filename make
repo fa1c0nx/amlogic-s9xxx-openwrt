@@ -64,19 +64,10 @@ kernel_repo="https://github.com/ophub/kernel/tree/main/pub"
 kernel_repo="${kernel_repo//tree\/main/trunk}"
 version_branch="stable"
 auto_kernel="true"
-build_kernel=("5.10.125" "5.15.50")
+build_kernel=("5.15.50")
 # Set supported board
 build_openwrt=(
-    "a311d"
-    "s922x" "s922x-n2" "s922x-reva"
-    "s905x3" "s905x3-b"
-    "s905x2" "s905x2-km3"
-    "s912" "s912-m8s"
-    "s905d" "s905d-ki" "s905l2"
-    "s905x"
-    "s905w"
     "s905"
-    "s905l3a"
 )
 # Set OpenWrt firmware size (Unit: MiB, SKIP_MB >= 4, BOOT_MB >= 256, ROOT_MB >= 512)
 SKIP_MB="68"
