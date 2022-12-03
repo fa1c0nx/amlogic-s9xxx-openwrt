@@ -13,7 +13,7 @@ on:
     inputs:
       branch:
         description: "Select the releases branch"
-        required: true
+        required: false
         default: "22.03.2"
         type: choice
         options:
@@ -23,7 +23,7 @@ on:
           - 18.06.9
       openwrt_board:
         description: "Select Amlogic board"
-        required: true
+        required: false
         default: "s905w"
         type: choice
         options:
@@ -49,7 +49,7 @@ on:
       openwrt_kernel:
         description: "Select kernel version"
         required: true
-        default: "5.10.135_5.15.50"
+        default: "5.15.50"
         type: choice
         options:
           - 5.4.210_5.10.135_5.15.50
