@@ -13,7 +13,7 @@ on:
     inputs:
       branch:
         description: "Select the releases branch"
-        required: false
+        required: true
         default: "22.03.2"
         type: choice
         options:
@@ -23,8 +23,8 @@ on:
           - 18.06.9
       openwrt_board:
         description: "Select Amlogic board"
-        required: false
-        default: "s905x3_s905d_s912"
+        required: true
+        default: "s905w"
         type: choice
         options:
           - all
@@ -48,7 +48,7 @@ on:
           - s905l2
       openwrt_kernel:
         description: "Select kernel version"
-        required: false
+        required: true
         default: "5.10.135_5.15.50"
         type: choice
         options:
@@ -136,7 +136,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           body: |
             This is OpenWrt firmware for Amlogic s9xxx tv box
-            * Firmware information
+            Firmware information
             Default IP: 10.0.0.2
             Default username: 2226
             Default password: 2226-Group-W3-4R3-TH3-FUTUR3
