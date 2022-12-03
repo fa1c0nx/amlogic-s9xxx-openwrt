@@ -136,7 +136,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           body: |
             This is OpenWrt firmware for Amlogic s9xxx tv box
-            Firmware information
+            * Firmware information
             Default IP: 10.0.0.2
             Default username: 2226
             Default password: 2226-Group-W3-4R3-TH3-FUTUR3
